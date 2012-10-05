@@ -11,13 +11,14 @@ setup(name='cs.recipe.checkinterval',
       # Get more strings from
       # http://pypi.python.org/pypi?:action=list_classifiers
       classifiers=[
-        "Framework :: Plone",
+        "Framework :: Buildout :: Recipe",
+        "Framework :: Zope2",
         "Programming Language :: Python",
         ],
-      keywords='',
-      author='',
-      author_email='',
-      url='http://svn.plone.org/svn/collective/',
+      keywords='python zope interpreter check interval',
+      author='Mikel Larreategi',
+      author_email='mlarreategi@codesyntax.com',
+      url='http://github.com/codesyntax/cs.recipe.checkinterval',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['cs', 'cs.recipe'],
@@ -26,11 +27,9 @@ setup(name='cs.recipe.checkinterval',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
+          'jarn.checkinterval'
       ],
-      entry_points="""
-      # -*- Entry points: -*-
-
-      [z3c.autoinclude.plugin]
-      target = plone
-      """,
+      entry_points={
+            'zc.buildout': ['default = cs.recipe.checkinterval:Recipe'],
+            },
       )
