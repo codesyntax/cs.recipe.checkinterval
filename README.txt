@@ -11,8 +11,8 @@ value for your setup, so no more need to execute manually the script.
 Configuration
 ==============
 
-Add a part in your buildout file pointing to this recipe *always before
-the part that creates the Zope instance*, as follows:
+Add a part in your buildout file pointing to this recipe before
+the part that creates the Zope instance, as follows::
 
   [buildout]
   parts = 
@@ -24,7 +24,7 @@ the part that creates the Zope instance*, as follows:
   [checkinterval]
   recipe = cs.recipe.checkinterval
 
-And then, just use the value provided by the recipe in your instance part:
+And then, just use the value provided by the recipe in your instance part::
 
   [instance]
   ...
@@ -36,4 +36,8 @@ And that's it.
 More about check-interval
 ===========================
 
-Please, read jarn.checkinterval's README to get more information about it.
+Please, read `jarn.checkinterval`_'s README to get more information about it.
+
+
+.. _`jarn.checkinterval`: http://pypi.python.org/pypi/jarn.checkinterval
+
